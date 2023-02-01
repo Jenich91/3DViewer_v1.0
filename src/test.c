@@ -132,7 +132,7 @@ START_TEST(rotation_test) {
 }
 END_TEST
 
-Suite *s21_suite(void) {
+Suite *sfleta_suite(void) {
   Suite *suite = suite_create("3DViewer");
   TCase *tcase_core = tcase_create("Tests");
   tcase_add_test(tcase_core, parsing_test);
@@ -145,7 +145,7 @@ Suite *s21_suite(void) {
 }
 
 int main(void) {
-  Suite *suite = s21_suite();
+  Suite *suite = sfleta_suite();
   SRunner *suite_runner = srunner_create(suite);
   srunner_run_all(suite_runner, CK_NORMAL);
   int failed_count = srunner_ntests_failed(suite_runner);
